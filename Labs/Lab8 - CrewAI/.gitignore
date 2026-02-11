@@ -1,0 +1,5 @@
+# Ignore secret API keys
+secret_key.py
+
+# Python cache
+__pycache__/

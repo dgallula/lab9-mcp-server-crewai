@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Recipe Finder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-100 to-pink-100 min-h-screen">
+  <div class="container mx-auto px-4 py-8">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-5xl font-bold text-purple-800 mb-2">🍽️ Mood Recipe Finder</h1>
+      <p class="text-gray-600 text-lg">Find the perfect recipe based on how you feel</p>
+    </div>
+
+    <!-- Mood Selection -->
+    <div id="moodSelection" class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-semibold text-center text-gray-800 mb-6">How are you feeling today?</h2>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+        <button onclick="selectMood('happy')" class="mood-btn bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-6 px-4 rounded-lg shadow-lg transform transition hover:scale-105">
+          <div class="text-4xl mb-2">😊</div>
+          <div class="text-lg">Happy</div>
+        </button>
+        <button onclick="selectMood('sad')" class="mood-btn bg-blue-400 hover:bg-blue-500 text-white font-bold py-6 px-4 rounded-lg shadow-lg transform transition hover:scale-105">
+          <div class="text-4xl mb-2">😢</div>
+          <div class="text-lg">Sad</div>
+        </button>
+        <button onclick="selectMood('stressed')" class="mood-btn bg-red-400 hover:bg-red-500 text-white font-bold py-6 px-4 rounded-lg shadow-lg transform transition hover:scale-105">
+          <div class="text-4xl mb-2">😰</div>
+          <div class="text-lg">Stressed</div>
+        </button>
+        <button onclick="selectMood('energetic')" class="mood-btn bg-green-400 hover:bg-green-500 text-white font-bold py-6 px-4 rounded-lg shadow-lg transform transition hover:scale-105">
+          <div class="text-4xl mb-2">⚡</div>
+          <div class="text-lg">Energetic</div>
+        </button>
+        <button onclick="selectMood('relaxed')" class="mood-btn bg-indigo-400 hover:bg-indigo-500 text-white font-bold py-6 px-4 rounded-lg shadow-lg transform transition hover:scale-105">
+          <div class="text-4xl mb-2">😌</div>
+          <div class="text-lg">Relaxed</div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Recipe Display -->
+    <div id="recipeDisplay" class="max-w-3xl mx-auto mt-12 hidden">
+      <div class="bg-white rounded-lg shadow-xl p-8">
+        <h2 id="recipeName" class="text-3xl font-bold text-purple-800 mb-4"></h2>
+        
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold text-gray-700 mb-2">Ingredients</h3>
+          <p id="recipeIngredients" class="text-gray-600 leading-relaxed"></p>
+        </div>
+        
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold text-gray-700 mb-2">Instructions</h3>
+          <p id="recipeInstructions" class="text-gray-600 leading-relaxed"></p>
+        </div>
+        
+        <div class="flex gap-4 justify-center">
+          <button onclick="getNewRecipe()" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transform transition hover:scale-105">
+            🔄 Try Another Recipe
+          </button>
+          <button onclick="backToMoods()" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transform transition hover:scale-105">
+            ← Change Mood
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading -->
+    <div id="loading" class="text-center mt-12 hidden">
+      <div class="text-4xl mb-4">🔄</div>
+      <p class="text-gray-600 text-lg">Finding the perfect recipe...</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

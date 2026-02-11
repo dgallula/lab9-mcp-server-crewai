@@ -1,0 +1,13 @@
+{
+    "mcpServers": {
+       "getWeatherServer": {
+            "command": "node",
+            "args": ["C:\\Users\\miche\\Desktop\\AI KIVUN\\4 - MCP\\Demo1_NodeJS\\index.js"]
+       }, 
+        "nameOriginServer": {
+            "command": "python",
+            "args": ["C:\\Users\\miche\\Desktop\\AI KIVUN\\4 - MCP\\Demo2_Python\\main.py"]
+        }
+       
+    }
+}

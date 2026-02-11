@@ -1,0 +1,8 @@
+# GitHub Token Configuration Template
+# 
+# IMPORTANT: This file should be git-ignored!
+# Copy this file to .github_env and replace with your actual token.
+#
+# DO NOT commit this file or your actual token to version control.
+
+GITHUB_TOKEN=ghp_your_personal_access_token_here
