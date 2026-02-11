@@ -1,8 +1,24 @@
 # API Keys and Secrets
 secret_key.py
+secret_key.js
 .env
 .env.local
+.env.*.local
 mcp.json
+
+# Environment variables
+*.env
+.env*
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
 
 # Python
 __pycache__/
