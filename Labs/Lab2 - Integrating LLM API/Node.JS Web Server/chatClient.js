@@ -14,7 +14,7 @@ server.listen(5000, () => {
 });
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: process.env.OPENAI_API_KEY || ""  // Set your OpenAI API key,
 });
 const openai = new OpenAIApi(configuration);
 

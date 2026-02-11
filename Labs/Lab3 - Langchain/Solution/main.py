@@ -5,7 +5,7 @@ from langchain.prompts import PromptTemplate
 from langchain.schema.output_parser import StrOutputParser
 from langchain_openai import ChatOpenAI
 import os
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = ""  # Set your OpenAI API key
 
 model = ChatOpenAI()
 

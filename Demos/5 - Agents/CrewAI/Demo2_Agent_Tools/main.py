@@ -1,7 +1,7 @@
 from crewai.tools import BaseTool, tool
 from crewai import Agent, Task, Crew, Process
 import os
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = ""  # Set your OpenAI API key
 
 class MyCalcTool(BaseTool):
     name:str = "My Calculator Tool"
